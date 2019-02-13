@@ -26,17 +26,20 @@ public class Recipe {
         this.name = name;
     }
 
-    public List<String> getIngredients()
+    public List<Ingredient> getIngredients()
     {
-        List<String> ingredientsString = new ArrayList<>();
-        for(int i = 0 ; i < ingredients.size() ; i++)
-        {
-            ingredientsString.add(ingredients.get(i).getQuantity() + " " + ingredients.get(i).getMeasure() + " " + ingredients.get(i).getIngredient());
-        }
-        return ingredientsString;
+        return ingredients;
     }
 
     public void setIngredients(List<Ingredient> ingredients) {
         this.ingredients = ingredients;
+    }
+
+    public List<Step> getSteps() {
+        return steps;
+    }
+
+    public void setSteps(List<Step> steps) {
+        this.steps = steps;
     }
 }
